@@ -9,6 +9,12 @@ podman start nginx-1742
 podman start nginx-443
 podman start nginx-80
 
+podman stop nginx-1740
+podman stop nginx-1741
+podman stop nginx-1742
+podman stop nginx-443
+podman stop nginx-80
+
 podman ps -a
 
 podman exec -it nginx-1740 sh
