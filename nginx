@@ -3,5 +3,6 @@ podman run -itd --rm -p 1741:80 --name nginx-1741 nginx
 podman run -itd --rm -p 1742:80 --name nginx-1742 nginx
 podman ps -a
 
-
+podman exec -it nginx-1740 sh
+ip route
 
