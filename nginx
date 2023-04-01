@@ -1,0 +1,3 @@
+podman run -itd --rm -p 1740:80 --name nginx-1740 nginx
+
+
