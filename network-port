@@ -8,3 +8,12 @@
                     "8080/tcp": null,
                     "8443/tcp": null
                },
+
+
+podman run -itd --rm -p 8888:8443 --name stormbreaker nginx
+podman run -itd --rm -p 1740:8080 --name stormbreaker nginx
+
+podman inspect 8e336828aa1b
+podman stop 8e336828aa1b
+
+
