@@ -23,3 +23,4 @@ podman exec -it nginx-1740 sh
 
 ip route
 
+podman exec -it nginx-1741 chmod o+r /usr/share/nginx/html/sensetime/index.html
