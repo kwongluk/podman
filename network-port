@@ -1,3 +1,4 @@
+#################################################
 "Ports": {
                     "80/tcp": [
                          {
@@ -10,10 +11,32 @@
                },
 
 
+
+
+################################################
+podman run -d --name mynginx nginx
+podman cp /path/to/source/code mynginx:/usr/share/nginx/html/
+podman exec -it mynginx ls /usr/share/nginx/html/
+podman exec -it mynginx mkdir /usr/share/nginx/html/myfolder
+podman exec -it mynginx ls /usr/share/nginx/html/
+podman cp mynginx:/usr/share/nginx/html /path/to/local/directory
+podman run -d --name mynginx --user nginx nginx
+
+#################################################
+podman run -itd --rm --name thor busybox
+podman stop thor
+podman start thor
+podman exec -it thor sh
+ip route
+
+#################################################
+podman run -itd --rm --name stormbreaker nginx
+podman start  stormbreaker
+podman stop stormbreaker
 podman run -itd --rm -p 8888:8443 --name stormbreaker nginx
 podman run -itd --rm -p 1740:8080 --name stormbreaker nginx
-
+podman ps
+podman exec -it stormbreaker sh
 podman inspect 8e336828aa1b
 podman stop 8e336828aa1b
-
-
+#################################################
