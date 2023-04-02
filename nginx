@@ -1,18 +1,21 @@
 podman run -itd --rm -p 1740:80 --name nginx-1740 nginx
 podman run -itd --rm -p 1741:80 --name nginx-1741 nginx
 podman run -itd --rm -p 1742:80 --name nginx-1742 nginx
+podman run -itd --rm -p 1743:80 --name nginx-1742 nginx
 podman run -itd --rm -p 443:443 --name nginx-443 nginx
 podman run -itd --rm -p 80:80 --name nginx-80 nginx
 
 podman start nginx-1740
 podman start nginx-1741
 podman start nginx-1742
+podman start nginx-1743
 podman start nginx-443
 podman start nginx-80
 
 podman stop nginx-1740
 podman stop nginx-1741
 podman stop nginx-1742
+podman stop nginx-1743
 podman stop nginx-443
 podman stop nginx-80
 
