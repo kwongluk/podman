@@ -3,6 +3,10 @@ podman run -itd --rm -p 1741:80 --name nginx-1741 nginx
 podman run -itd --rm -p 1742:80 --name nginx-1742 nginx
 podman run -itd --rm -p 1743:80 --name nginx-1743 nginx
 podman run -itd --rm -p 443:443 --name nginx-443 nginx
+podman inspect nginx-443 | grep IPAddress
+podman exec -it nginx-443 /bin/bash
+vi /etc/nginx/nginx.conf
+
 podman run -itd --rm -p 80:80 --name nginx-80 nginx
 
 podman start nginx-1740
